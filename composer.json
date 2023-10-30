@@ -1,31 +1,30 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "webhoek/filament-generative-ai",
+    "description": "This is my package filament-generative-ai",
     "keywords": [
-        ":vendor_name",
+        "Webhoek",
         "laravel",
-        ":package_slug"
+        "filament-generative-ai"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/webhoek/filament-generative-ai",
     "support": {
-        "issues": "https://github.com/:vendor_slug/:package_slug/issues",
-        "source": "https://github.com/:vendor_slug/:package_slug"
+        "issues": "https://github.com/webhoek/filament-generative-ai/issues",
+        "source": "https://github.com/webhoek/filament-generative-ai"
     },
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Beaudinn Greve",
+            "email": "beaudinngreve@gmail.comm",
             "role": "Developer"
         }
     ],
     "require": {
         "php": "^8.1",
         "filament/filament": "^3.0",
-        "filament/forms": "^3.0",
-        "filament/tables": "^3.0",
+        "illuminate/contracts": "^10.0",
         "spatie/laravel-package-tools": "^1.15.0",
-        "illuminate/contracts": "^10.0"
+        "theodo-group/llphant": "^0.2.11"
     },
     "require-dev": {
         "laravel/pint": "^1.0",
@@ -37,18 +36,17 @@
         "pestphp/pest-plugin-laravel": "^2.0",
         "phpstan/extension-installer": "^1.1",
         "phpstan/phpstan-deprecation-rules": "^1.0",
-        "phpstan/phpstan-phpunit": "^1.0",
-        "spatie/laravel-ray": "^1.26"
+        "phpstan/phpstan-phpunit": "^1.0"
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src/",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories/"
+            "Webhoek\\FilamentGenerativeAi\\": "src/",
+            "Webhoek\\FilamentGenerativeAi\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests/"
+            "Webhoek\\FilamentGenerativeAi\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -62,16 +60,17 @@
         "sort-packages": true,
         "allow-plugins": {
             "pestphp/pest-plugin": true,
-            "phpstan/extension-installer": true
+            "phpstan/extension-installer": true,
+            "php-http/discovery": true
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Webhoek\\FilamentGenerativeAi\\FilamentGenerativeAiServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "FilamentGenerativeAi": "Webhoek\\FilamentGenerativeAi\\Facades\\FilamentGenerativeAi"
             }
         }
     },
