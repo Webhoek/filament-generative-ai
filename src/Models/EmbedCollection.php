@@ -8,22 +8,25 @@ use Ramsey\Uuid\Uuid;
 
 class EmbedCollection extends Model
 {
-	use HasFactory;
+    use HasFactory;
 
-	public $fillable = ['name', 'meta_data'];
-	public $incrementing = false;
-	public $keyType = "string";
+    public $fillable = ['name', 'meta_data'];
 
-	protected static function booted()
-	{
-		static::creating(function ($model) {
-			$model->id = Uuid::uuid4()->toString();
-		});
-	}
+    public $incrementing = false;
 
-	public function toArray()
-	{
-		$this->meta_data = json_decode($this->meta_data);
-		return $this;
-	}
+    public $keyType = 'string';
+
+    protected static function booted()
+    {
+        static::creating(function ($model) {
+            $model->id = Uuid::uuid4()->toString();
+        });
+    }
+
+    public function toArray()
+    {
+        $this->meta_data = json_decode($this->meta_data);
+
+        return $this;
+    }
 }

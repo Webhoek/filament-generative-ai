@@ -69,7 +69,7 @@ class FilamentGenerativeAiServiceProvider extends PackageServiceProvider
         //    $this->getAssets(),
         //    $this->getAssetPackageName()
         //);
-		//
+        //
         //FilamentAsset::registerScriptData(
         //    $this->getScriptData(),
         //    $this->getAssetPackageName()
