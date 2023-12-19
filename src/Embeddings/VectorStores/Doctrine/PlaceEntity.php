@@ -20,6 +20,6 @@ class PlaceEntity extends DoctrineEmbeddingEntityBase
     #[ORM\Column(type: Types::STRING, nullable: true)]
     public string $category = 'default';
 
-	#[ORM\Column(type: Types::STRING, nullable: true)]
-	public string $tags = "";
+    #[ORM\Column(type: Types::STRING, nullable: true)]
+    public string $tags = '';
 }
